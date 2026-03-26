@@ -1,0 +1,52 @@
+{
+  "name": "linkedin-prospection-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for LinkedIn prospection automation — find leads, score, qualify, personalize outreach messages, and manage your sales pipeline from any AI agent",
+  "mcpName": "io.github.gomessoaresemmanuel-cpu/linkedin-prospection-mcp",
+  "type": "module",
+  "bin": {
+    "linkedin-prospection-mcp": "./build/index.js"
+  },
+  "main": "./build/index.js",
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE",
+    "smithery.yaml"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"const fs=require('fs'); const f='build/index.js'; const c=fs.readFileSync(f,'utf8'); if(!c.startsWith('#!')) fs.writeFileSync(f,'#!/usr/bin/env node\\n'+c);\"",
+    "dev": "tsc --watch",
+    "start": "node build/index.js",
+    "prepublishOnly": "npm run build",
+    "inspect": "npx @modelcontextprotocol/inspector node build/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "linkedin",
+    "prospection",
+    "sales",
+    "lead-generation",
+    "outreach",
+    "ai-agent",
+    "automation"
+  ],
+  "author": "Emmanuel Gomes Soares <hello@stresszeroentrepreneur.fr>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gomessoaresemmanuel-cpu/linkedin-prospection-mcp"
+  },
+  "homepage": "https://github.com/gomessoaresemmanuel-cpu/linkedin-prospection-mcp",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}

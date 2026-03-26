@@ -1,0 +1,34 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.gomessoaresemmanuel-cpu/linkedin-prospection-mcp",
+  "description": "LinkedIn prospection automation for AI agents — find leads, score, qualify, personalize outreach, and manage your sales pipeline",
+  "title": "LinkedIn Prospection MCP",
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "linkedin-prospection-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environment_variables": [
+        {
+          "name": "PROSPECTION_DIR",
+          "description": "Path to your prospection scripts directory (default: D:\\Neo business\\stresszero-entrepreneur\\lib\\prospection)",
+          "required": false
+        },
+        {
+          "name": "STRESSZERO_PROJECT",
+          "description": "Path to the StressZero project root (alternative to PROSPECTION_DIR)",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/gomessoaresemmanuel-cpu/linkedin-prospection-mcp",
+    "source": "github"
+  }
+}

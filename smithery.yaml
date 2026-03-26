@@ -1,0 +1,17 @@
+name: linkedin-prospection-mcp
+description: "LinkedIn prospection automation MCP — find leads, score (fit+intent+urgency), qualify, personalize messages, run full pipeline, manage sales funnel"
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      prospectionDir:
+        type: string
+        description: "Path to prospection scripts directory"
+    required: []
+  commandFunction: |-
+    (config) => ({
+      command: "npx",
+      args: ["-y", "linkedin-prospection-mcp"],
+      env: config.prospectionDir ? { PROSPECTION_DIR: config.prospectionDir } : {}
+    })
