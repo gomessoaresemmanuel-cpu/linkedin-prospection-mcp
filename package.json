@@ -1,6 +1,6 @@
 {
   "name": "linkedin-prospection-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for LinkedIn prospection automation — find leads, score, qualify, personalize outreach messages, and manage your sales pipeline from any AI agent",
   "mcpName": "io.github.gomessoaresemmanuel-cpu/linkedin-prospection-mcp",
   "type": "module",
